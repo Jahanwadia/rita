@@ -24,8 +24,8 @@ rita: $(SRC)
 install: rita
 	mv rita $(PREFIX)/bin/
 	mkdir -p $(PREFIX)/etc/bash_completion.d/ $(PREFIX)/etc/rita/
-	sudo cp etc/bash_completion.d/rita $(PREFIX)/etc/bash_completion.d/rita
-	sudo cp etc/rita.yaml $(PREFIX)/etc/rita/config.yaml
+	cp etc/bash_completion.d/rita $(PREFIX)/etc/bash_completion.d/rita
+	cp etc/rita.yaml $(PREFIX)/etc/rita/config.yaml
 
 .PHONY: docker-check
 # Use this recipe if you want to fail if docker is missing
