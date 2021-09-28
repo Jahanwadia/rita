@@ -1,8 +1,6 @@
-VERSION := $(shell git describe --abbrev=0 --tags)
-EXACT_VERSION := $(shell git describe --always --long --dirty --tags)
 PREFIX ?= /usr/local
 
-LDFLAGS := -ldflags='-X github.com/activecm/rita/config.Version=${VERSION} -X github.com/activecm/rita/config.ExactVersion=${EXACT_VERSION}'
+LDFLAGS := -ldflags='-X github.com/activecm/rita/config.Version=v4.4.0 -X github.com/activecm/rita/config.ExactVersion=v4.4.0-0-g4a4b639'
 TESTFLAGS := -p=1 -v
 # go source files
 SRC := $(shell find . -path ./vendor -prune -o -type f -name '*.go' -print)
